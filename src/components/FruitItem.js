@@ -4,8 +4,9 @@ import React from 'react';
 const FruitItem = ({fruit, onDelete}) => (
   <li >
       {fruit}
-      <button onClick={onDelete} type="button">Remover</button>
+      <i onClick={onDelete} class="fas fa-minus-circle"></i>
   </li>
 );
 
 export default FruitItem;
+

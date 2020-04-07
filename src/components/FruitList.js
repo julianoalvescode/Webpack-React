@@ -44,23 +44,27 @@ class Fruits extends Component {
 
     render() {
         return(
-            <form onSubmit={this.handleSubmit}>
-              <ul>
-                  {this.state.fruits.map(item => (
-                      <FruitItem 
-                        fruit={item} 
-                        key={item}
-                        onDelete={() => this.handleDelete(item)}
-                      />
-                  ))}
-              </ul>
-              <input 
-                  onChange={this.handleChange} 
-                  type="text" 
-                  value={this.state.newFruits}
-                />
-              <input type="submit"/>
-            </form>
+            <div className="box">
+              <div className="content">
+                <form onSubmit={this.handleSubmit}>
+                  <ul>
+                    {this.state.fruits.map(item => (
+                        <FruitItem 
+                          fruit={item} 
+                          key={item}
+                          onDelete={() => this.handleDelete(item)}
+                        />
+                    ))}
+                  </ul>
+                  <input
+                    onChange={this.handleChange} 
+                    type="text" 
+                    value={this.state.newFruits}
+                  />
+                  <input type="submit"/>
+                </form>
+              </div>
+            </div>
         )
     }
 
