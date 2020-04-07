@@ -1,3 +1,6 @@
-const sum = (a, b) =>  a + b
+import React from 'react'
+import { render } from 'react-dom'
+import App from './App'
 
-alert(sum(3, 4))
+
+render(<App/>, document.getElementById("app"))
